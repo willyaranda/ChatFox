@@ -16,10 +16,13 @@
        "You have a new message");
               notification.show();
   };
+  alert('antes');
+  Push.getNewEndpoint();
+  alert('despues');
   //
   // socket.io code
   //
-  var socket = io.connect('http://localhost:8443');
+  var socket = io.connect('http://192.168.1.71:8443');
 
   socket.on('connect', function () {
     $('#chat').addClass('connected');
